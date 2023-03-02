@@ -44,5 +44,4 @@ jobs:
       # run builds!
       - run: gradle build
       
-      # run code-analysis!
-      - run: gradle sonarqube
+ 
