@@ -41,5 +41,8 @@ jobs:
       # run tests!
       - run: gradle test
       
-      # run tests!
+      # run builds!
       - run: gradle build
+      
+      # run code-analysis!
+      - run: gradle sonarqube
