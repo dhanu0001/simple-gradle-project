@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.4.5'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id "org.sonarqube" version "3.3"
 }
 
 group = 'com.example'
@@ -27,7 +28,18 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+   
+   sonarqube {
+    properties {
+      property "sonar.projectKey", "saks-code-repo"
+      property "sonar.organization", "dhanu0001"
+      property "sonar.host.url", "https://sonarcloud.io"
+      property "sonar.login", "7ee42a88ae8539b3bf2c4534809d6cb522655bef"
+    }
+  }	
 }
+
+
 
 test {
 	useJUnitPlatform()
